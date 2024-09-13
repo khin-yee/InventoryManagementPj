@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BazorApi.props" />
+</Project>
