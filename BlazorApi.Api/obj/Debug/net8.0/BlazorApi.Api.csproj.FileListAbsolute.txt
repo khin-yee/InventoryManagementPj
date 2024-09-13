@@ -50,3 +50,4 @@ C:\C#\BlazorwithApi\BazorApi\BlazorApi.Api\obj\Debug\net8.0\refint\BlazorApi.Api
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Api\obj\Debug\net8.0\BlazorApi.Api.pdb
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Api\obj\Debug\net8.0\BlazorApi.Api.genruntimeconfig.cache
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Api\obj\Debug\net8.0\ref\BlazorApi.Api.dll
+C:\C#\BlazorwithApi\BazorApi\BlazorApi.Api\obj\Debug\net8.0\BlazorApi.Api.sourcelink.json

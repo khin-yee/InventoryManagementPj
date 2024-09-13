@@ -10,3 +10,4 @@ C:\C#\BlazorwithApi\BazorApi\BlazorApi.Repository\obj\Debug\net8.0\BlazorApi.Rep
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Repository\obj\Debug\net8.0\refint\BlazorApi.Repository.dll
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Repository\obj\Debug\net8.0\BlazorApi.Repository.pdb
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Repository\obj\Debug\net8.0\ref\BlazorApi.Repository.dll
+C:\C#\BlazorwithApi\BazorApi\BlazorApi.Repository\obj\Debug\net8.0\BlazorApi.Repository.sourcelink.json
