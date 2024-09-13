@@ -1,7 +1,43 @@
 ﻿@page "/"
+@using BazorApi.ApiControl
+@using BazorApi.Model
 
-<PageTitle>Home</PageTitle>
+<h3>Product List</h3>
+@inject IApiCall apicall
 
-<h1>Hello, world!</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (product is not null)
+        {
+            foreach (var inv in product)
+            {
+                <tr>
+                    <td>@inv.Name</td>
+                    <td>@inv.Code</td>
+                    <td>@inv.Description</td>
+                    <td>@inv.StartDate</td>
+                    <td>@inv.EndDate</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
 
-Welcome to your new app.
+@code {
+    private List<ProductCollection>? product;
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await apicall.GetProduct();
+    }
+}

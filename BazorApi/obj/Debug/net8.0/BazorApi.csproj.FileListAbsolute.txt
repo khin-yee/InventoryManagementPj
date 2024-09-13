@@ -31,3 +31,4 @@ C:\C#\BlazorwithApi\BazorApi\BazorApi\obj\Debug\net8.0\BazorApi.csproj.AssemblyR
 C:\C#\BlazorwithApi\BazorApi\BazorApi\bin\Debug\net8.0\MongoDB.Bson.dll
 C:\C#\BlazorwithApi\BazorApi\BazorApi\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\C#\BlazorwithApi\BazorApi\BazorApi\obj\Debug\net8.0\BazorApi.csproj.Up2Date
+C:\C#\BlazorwithApi\BazorApi\BazorApi\obj\Debug\net8.0\BazorApi.sourcelink.json
