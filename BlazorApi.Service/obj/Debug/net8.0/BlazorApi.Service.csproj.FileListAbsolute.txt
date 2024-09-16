@@ -8,9 +8,9 @@ C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Servic
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Service.AssemblyInfoInputs.cache
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Service.AssemblyInfo.cs
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Service.csproj.CoreCompileInputs.cache
+C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Service.sourcelink.json
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorAp.C6AC444D.Up2Date
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Service.dll
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\refint\BlazorApi.Service.dll
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Service.pdb
 C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\ref\BlazorApi.Service.dll
-C:\C#\BlazorwithApi\BazorApi\BlazorApi.Service\obj\Debug\net8.0\BlazorApi.Service.sourcelink.json
