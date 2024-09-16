@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ySFt3ZpHlVs=",
+  "dgSpecHash": "L7n13wEl0NU=",
   "success": true,
   "projectFilePath": "C:\\C#\\BlazorwithApi\\BazorApi\\BlazorApi.Api\\BlazorApi.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\aspnetcore.healthchecks.mongodb\\8.1.0\\aspnetcore.healthchecks.mongodb.8.1.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

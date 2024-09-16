@@ -1,4 +1,5 @@
-﻿using BlazorApi.Repository.Domain;
+﻿using Amazon.SecurityToken.Model.Internal.MarshallTransformations;
+using BlazorApi.Repository.Domain;
 using BlazorApi.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +19,11 @@ namespace BlazorApi.Api.Controllers
         public async Task<List<ProductCollection>> GetProduct()
         {
             return await _service.GetProducts();
+        }
+        [HttpPost]
+        public async Task AddProduct(ProductDto product) 
+        {
+             await _service.AddProduct(product);
         }
     }
 }

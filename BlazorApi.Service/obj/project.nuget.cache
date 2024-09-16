@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "yHBSOjzQUcU=",
+  "dgSpecHash": "2Fi0AA+eZoM=",
   "success": true,
   "projectFilePath": "C:\\C#\\BlazorwithApi\\BazorApi\\BlazorApi.Service\\BlazorApi.Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",

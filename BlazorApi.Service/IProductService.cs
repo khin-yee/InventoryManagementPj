@@ -10,5 +10,7 @@ namespace BlazorApi.Service
     public  interface IProductService
     {
         Task<List<ProductCollection>> GetProducts();
+        Task AddProduct(ProductDto product);
+
     }
 }

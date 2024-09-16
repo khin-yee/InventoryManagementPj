@@ -32,6 +32,10 @@ namespace BlazorApi.Repository.Repository
                 throw new Exception();
             }
         }
+        public async  Task AddProduct(T product)
+        {
+            await _mongoDbCollection.InsertOneAsync(product); 
+        }
 
     }
 

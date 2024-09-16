@@ -10,6 +10,8 @@ namespace BlazorApi.Repository.Repository
     public  interface IProductRepository<T> where T:ProductCollection
     {
         Task<List<T>> GetAsync();
+        Task AddProduct(T product);
+
 
     }
 }

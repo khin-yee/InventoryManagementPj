@@ -2,6 +2,7 @@ using BlazorApi.Repository.Domain;
 using BlazorApi.Repository.Repository;
 using BlazorApi.Service;
 using HealthChecks.MongoDb;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(c => c.AddProfile<MappingProfile>(), typeof(Program));
 builder.Services.Configure<DbSetting>(
     builder.Configuration.GetSection("MGDatabaseSetting")
     );
