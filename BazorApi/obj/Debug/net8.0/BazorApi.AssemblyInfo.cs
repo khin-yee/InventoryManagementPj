@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BazorApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64044487000908cd63b8e557e55cc325ff3863f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97686a407e68b4a4027ebacdc6dc638655436cfd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BazorApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BazorApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
