@@ -1,5 +1,6 @@
 using BazorApi.ApiControl;
 using BazorApi.Components;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,14 @@ builder.Services.AddRazorComponents();
 builder.Services.AddHttpClient();
 builder.Services.AddHttpClient<IHttpClientService,HttpClientService>();
 builder.Services.AddScoped<IApiCall, ApiCall>();
+//builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(
+//    options =>
+//    {
+//        options.Cookie.Name = "auth_token";
+//        options.
+//    }
+//    ); 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
