@@ -4,8 +4,7 @@
 @using Microsoft.AspNetCore.Authorization
 @inject NavigationManager Navigation
 @inject IApiCall apicall
-@attribute [Authorize(Roles = "Adminstrator")]
-
+@attribute [Authorize(Roles = "Adminstrator,User")]
 <style>
     .button-container {
         display: flex;
@@ -21,7 +20,7 @@
 </style>
 <h3>Product List</h3>
 <div class="button-container">
-     <AuthorizeView>
+     <AuthorizeView Roles="Adminstrator">
         <Authorized>
           <NavLink class="btn btn-outline-dark mx-2" href="/AddProduct">Add Product</NavLink>
         </Authorized>
