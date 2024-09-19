@@ -1,8 +1,9 @@
 ﻿@page "/weather"
+@using Microsoft.AspNetCore.Authorization
 @rendermode InteractiveServer
 @inject IJSRuntime js
 @attribute [StreamRendering]
-
+@attribute [Authorize(Roles="Adminstrator")]
 <PageTitle>Weather</PageTitle>
 
 <h1>Weather</h1>

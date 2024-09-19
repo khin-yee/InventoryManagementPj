@@ -1,5 +1,4 @@
 ﻿using BazorApi.Model;
-using BlazorApi.Repository.Domain;
 using Newtonsoft.Json;
 using System.Text;
 
@@ -14,7 +13,7 @@ namespace BazorApi.ApiControl
         }
         public async Task<List<Model.ProductCollection>> GetProduct()
         {
-           var res = await _http.SendAsync<Model.ProductCollection>("https://localhost:7094/api/Product","100",null,HttpMethod.Get);
+           var res = await _http.SendAsync<ProductCollection>("https://localhost:7094/api/Product","100",null,HttpMethod.Get);
            return res;
         }
         public async Task<AccountCollection> GetAccountAuth(string username,string password)
