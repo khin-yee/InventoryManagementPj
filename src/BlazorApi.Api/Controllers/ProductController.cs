@@ -20,6 +20,16 @@ namespace BlazorApi.Api.Controllers
         {
             return await _service.GetProducts();
         }
+        [HttpGet("/account")]
+        public async Task<List<AccountCollection>> GetAccount()
+        {
+            return await _service.GetAccount();
+        }
+        [HttpPost("/AccValidate")]
+        public async Task<AccountCollection> GetAccountByAuth([FromForm] string username, [FromForm] string password)
+        {
+            return await _service.GetAccountAuth(username,password);
+        }
         [HttpPost]
         public async Task AddProduct(ProductDto product) 
         {

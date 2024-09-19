@@ -22,6 +22,7 @@ var dbname = builder.Configuration.GetSection("MGDatabaseSetting:DatabaseName").
 var connectionString = builder.Configuration.GetSection("MGDatabaseSetting:ConnectionString").Value;
 builder.Services.AddSingleton(new MongoDbHealthCheck(connectionString, dbname));
 builder.Services.AddTransient(typeof(IProductRepository<>), typeof(ProductRepository<>));
+builder.Services.AddTransient(typeof(IAccountRepository<>), typeof(AccountRepository<>));
 builder.Services.AddTransient<IProductService, ProductService>();
 var app = builder.Build();
 

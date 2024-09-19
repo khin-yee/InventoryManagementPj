@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BazorApi", "src/BazorApi\BazorApi.csproj", "{EFF1E1A5-BBC8-413B-A6B1-165AAAC4970A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BazorApi", "src\BazorApi\BazorApi.csproj", "{EFF1E1A5-BBC8-413B-A6B1-165AAAC4970A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApi.Api", "src/BlazorApi.Api\BlazorApi.Api.csproj", "{02CB4417-431D-4B78-90F6-76AE90A89EF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApi.Api", "src\BlazorApi.Api\BlazorApi.Api.csproj", "{02CB4417-431D-4B78-90F6-76AE90A89EF3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApi.Repository", "src/BlazorApi.Repository\BlazorApi.Repository.csproj", "{5916F51E-D757-4A8C-9CE1-5BCC9615FD02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApi.Repository", "src\BlazorApi.Repository\BlazorApi.Repository.csproj", "{5916F51E-D757-4A8C-9CE1-5BCC9615FD02}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApi.Service", "src/BlazorApi.Service\BlazorApi.Service.csproj", "{0C942A98-A38C-4869-B653-64C31AFCE21E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApi.Service", "src\BlazorApi.Service\BlazorApi.Service.csproj", "{0C942A98-A38C-4869-B653-64C31AFCE21E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

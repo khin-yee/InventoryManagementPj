@@ -11,6 +11,8 @@ namespace BlazorApi.Repository.Domain
         public string? ConnectionString { get; set; }
         public string? DatabaseName { get; set; }
         public string? CollectionName { get; set; }
-      
+        public string? AccountCollectionName { get; set; }
+
+
     }
 }

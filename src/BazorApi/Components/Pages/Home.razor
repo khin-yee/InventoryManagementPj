@@ -1,43 +1,22 @@
 ﻿@page "/"
-@using BazorApi.ApiControl
-@using BazorApi.Model
 
-<h3>Product List</h3>
-@inject IApiCall apicall
+<div class="row">
+    <div class="col-12">
+        <h2 class="fw-bolder">Welcome to <span class="text-dark">Inventory Management</span></h2>
+    </div>
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <AuthorizeView>
+                    <NotAuthorized>
+                        <span>You are not LogIn .<a class="fw-bolder" href="/login">Click Here</a>to Login!.</span>
+                    </NotAuthorized>
+                    <Authorized>
+                        <span>Logged in as <b>@context.User.Identity.Name</b><a class="fw-bolder" href="/logout">Click Here</a>to login</span>
+                    </Authorized>
+                </AuthorizeView>
+            </div>
+        </div>
+    </div>
+</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Code</th>
-            <th>Description</th>
-            <th>StartDate</th>
-            <th>EndDate</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (product is not null)
-        {
-            foreach (var inv in product)
-            {
-                <tr>
-                    <td>@inv.Name</td>
-                    <td>@inv.Code</td>
-                    <td>@inv.Description</td>
-                    <td>@inv.StartDate</td>
-                    <td>@inv.EndDate</td>
-                </tr>
-            }
-        }
-    </tbody>
-</table>
-
-@code {
-    private List<ProductCollection>? product;
-
-    protected override async Task OnInitializedAsync()
-    {
-        product = await apicall.GetProduct();
-    }
-}

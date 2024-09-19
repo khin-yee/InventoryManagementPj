@@ -15,13 +15,24 @@ namespace BlazorApi.Service
         private readonly IMapper _mapper;
 
         private readonly IProductRepository<ProductCollection> _repo;
-       public ProductService(IProductRepository<ProductCollection> repo,IMapper mapper)
+        private readonly IAccountRepository<AccountCollection> _accrepo;
+       public ProductService(IProductRepository<ProductCollection> repo,IAccountRepository<AccountCollection> accrepo, IMapper mapper)
        {
             _repo = repo;
+            _accrepo = accrepo;
             _mapper = mapper;
        }
-
-       public async Task<List<ProductCollection>> GetProducts()
+        public async Task<List<AccountCollection>> GetAccount()
+        {
+            var res = await _accrepo.GetAsync();
+            return res;
+        }
+        public async Task<AccountCollection> GetAccountAuth(string username,string password)
+        {
+            var res = await _accrepo.GetAsyncByAuth(username,password);
+            return res;
+        }
+        public async Task<List<ProductCollection>> GetProducts()
        {
             var res =  await _repo.GetAsync();
             return res;
