@@ -1,0 +1,41 @@
+﻿@page "/AddUser"
+@using BazorApi.ApiControl
+@using BazorApi.Model
+@using BazorApi.Model.ViewModels
+@inject IApiCall apicall
+
+<h5 class="p-2">Sign In</h5>
+<EditForm Model="@model" OnValidSubmit="OnSubmit" FormName="AddUserForm">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudCard>
+                <MudCardContent>
+    
+                    <MudTextField ShrinkLabel @bind-Value="model.Username" Label="Username" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Password" Label="Password" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Role" Label="Role" Variant="Variant.Text" class="p-2"></MudTextField>
+                  
+               </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Dark" Class="ml-auto" Href="/ProductList">
+                        Cancel
+                    </MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="m-2">Register</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+</EditForm>
+
+@code {
+    private SignIn model = new SignIn ();
+
+    public async Task OnSubmit(EditContext context)
+    {
+        var test = context;
+        var test2 = await apicall.AddAccount(model);
+
+    }
+}

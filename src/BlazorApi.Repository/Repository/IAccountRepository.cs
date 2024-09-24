@@ -11,6 +11,8 @@ namespace BlazorApi.Repository.Repository
     {
         Task<List<T>> GetAsync();
         Task<T> GetAsyncByAuth(string username, string password);
+        Task AddUser(T Account);
+
 
     }
 }

@@ -1,73 +1,67 @@
 ﻿@page "/AddProduct"
 @using BlazorApi.Repository.Domain
+<h5 class="p-2">Add Product</h5>
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="7">
+            <MudCard>
+                <MudCardContent>
+                 @*    <MudTextField Label="Code" HelperText="Max. 8 characters"
+                                  @bind-Value="model.Code" />
+                    <MudTextField Label="Name" Class="mt-3"
+                                  @bind-Value="model.Name" />
+                    <MudTextField Label="Description" Class="mt-3"
+                                  @bind-Value="model.Description" />
+                    <MudTextField Label="StartDate" Class="mt-3"
+                                  @bind-Value="model.StartDate" /> *@
+                    <MudTextField ShrinkLabel @bind-Value="model.Code" Label="Code" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Name" Label="Name" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.Description" Label="Description" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.StartDate" Label="StartDate" Variant="Variant.Text" class="p-2"></MudTextField>
+                    <MudTextField ShrinkLabel @bind-Value="model.EndDate" Label="EndDate" Variant="Variant.Text" class="p-2"></MudTextField>
 
-<form Method="post" enctype="multipart/form-data" model="product">
-    <div class="containerzv2 pt-19">
-        <div class="row mb-3">
-            <div class="d-flex align-items-center">
-                <h1 class="me-2">Create</h1>
-                <h1 class="">Product</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <div class="col-md-6 w-label">
-                        <label class="col-form-label label-txt-style required fw-bolder fs-6">Product Code</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" required class="form-control input-box " placeholder="Enter Product Code" asp-for="Name" id="txtName">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-6 w-label">
-                        <label class="col-form-label label-txt-style required fw-bolder fs-6">Product Name</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" required class="form-control input-box " placeholder="Enter Product Name" asp-for="Name" id="txtName">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-6 w-label">
-                        <label class="col-form-label label-txt-style required fw-bolder fs-6">Description</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" required class="form-control input-box " placeholder="Enter Description" asp-for="Name" id="txtName">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-6 w-label">
-                        <label class="col-form-label label-txt-style required fw-bolder fs-6">Start Date</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" required class="form-control input-box " placeholder="Enter Start Date" asp-for="Name" id="txtName">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-6 w-label">
-                        <label class="col-form-label label-txt-style required fw-bolder fs-6">End Date</label>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" required class="form-control input-box " placeholder="Enter End Date" asp-for="Name" id="txtName">
-                    </div>
-                </div>
-                <div class="row txt-input-group mt-3">
-                    <div class="col-lg-12">
-                        <div class="d-flex ">
-                            <NavLink class="btn btn-outline-dark me-2" href="/ProductList">Cancel</NavLink>
-                            <button type="submit" class="btn btn-dark" onClick="AddProduct()">Create</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
+
+                   @*  <MudInputLabel>Code </MudInputLabel>           
+                    <MudTextField @bind-Value="model.Code"
+                                  For="@(() => model.Code)"
+                                  Immediate="true"
+                                  />
+                    <MudInputLabel>Name </MudInputLabel>
+                    <MudTextField @bind-Value="model.Name"
+                                  For="@(() => model.Name)"
+                                  Immediate="true"
+                                  />
+                    <MudInputLabel>Description</MudInputLabel>
+                    <MudTextField @bind-Value="model.Description"
+                                  For="@(() => model.Description)"
+                                  Immediate="true"
+                                   />
+                    <MudInputLabel> Start Date  </MudInputLabel>
+                    <MudTextField @bind-Value="model.StartDate"
+                                  For="@(() => model.StartDate)"
+                                  Immediate="true"
+                                   /> *@
+
+
+
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Outlined" Color="Color.Dark" Class="ml-auto" Href="/ProductList">
+                       Cancel
+                    </MudButton>
+                   <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Dark" Class="m-2">Register</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+
+</EditForm>
 
 
 @code {
-    private ProductDto product = new ProductDto();
-    public Task AddProduct(ProductDto product)
+    private ProductDto model = new ProductDto();
+    public Task OnValidSubmit(EditContext context)
     {
         throw new Exception();
     }

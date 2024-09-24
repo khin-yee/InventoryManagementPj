@@ -32,34 +32,17 @@
             <span>Filter</span>
         </div>
 </div>
+<MudDataGrid Items="@product" Striped="true" Hover="true">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Code</th>
-            <th>Description</th>
-            <th>StartDate</th>
-            <th>EndDate</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @if(product is not null)
-        {
-            foreach(var inv in product)
-            {
-              <tr>
-              <td>@inv.Name</td>
-              <td>@inv.Code</td>
-              <td>@inv.Description</td>
-              <td>@inv.StartDate</td>
-              <td>@inv.EndDate</td>
-              </tr>
-            }
-        }
-    </tbody>
-</table>
+    <Columns>
+        <PropertyColumn Property="x=>x.Name" Title="Name" />
+        <PropertyColumn Property="x=>x.Code" Title="Code" />
+        <PropertyColumn Property="x=>x.StartDate" Title="Start Date" />
+        <PropertyColumn Property="x=>x.EndDate" Title="End Date" />
+        <PropertyColumn Property="x=>x.CreatedDate" Title="Created Date" />
+    </Columns>
+</MudDataGrid>
+
 @code {
     private List<ProductCollection>? product;
 

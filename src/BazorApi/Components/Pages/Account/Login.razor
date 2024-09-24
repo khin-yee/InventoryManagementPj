@@ -13,7 +13,8 @@
     }
 </style>
 <div class="row">
-        <div class="col-lg-4 offset-lg-4 pt-4  pb-4 border">
+    <MudCard Outlined="true" class="col-lg-4 offset-lg-4 pt-4  pb-4 border">
+        <MudCardContent>
             <EditForm Model="@Model" OnValidSubmit="Authenticate" FormName="LoginForm">
                 <DataAnnotationsValidator/>
 
@@ -37,10 +38,12 @@
             <div class="mb-3 d-grid gap-2">
                 <button type="submit" class="btn btn-outline-dark">Login</button>
             </div>
+                <div class="mb-3">If you don't have account, <a class="fw-bolder" href="/AddUser">Click Here</a> to Create Account'</div>
             </EditForm>
-
-        </div>
+            </MudCardContent>
+        </MudCard>
 </div>
+
 @code {
     [SupplyParameterFromForm]
     public LoginViewModel Model { get; set; } = new();

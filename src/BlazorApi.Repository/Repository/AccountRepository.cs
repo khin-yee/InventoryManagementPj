@@ -20,7 +20,10 @@ namespace BlazorApi.Repository.Repository
             var mongoDatabase = mongoClient.GetDatabase(mongodatabasesetting.Value.DatabaseName);
             _mongoDbCollection = mongoDatabase.GetCollection<T>(mongodatabasesetting.Value.AccountCollectionName);
         }
-
+        public async Task AddUser(T Account)
+        {
+            await _mongoDbCollection.InsertOneAsync(Account);
+        }
         public async Task<List<T>> GetAsync()
         {
             try

@@ -70,5 +70,35 @@ namespace BlazorApi.Service
             await _repo.AddProduct(Product);
         }
 
+
+        public async Task AddUser(SignIn signin)
+        {
+            if (_mapper == null)
+            {
+                throw new InvalidOperationException("Mapper not initialized.");
+            }
+
+            if (_repo == null)
+            {
+                throw new InvalidOperationException("Repository not initialized.");
+            }
+
+            if (signin == null)
+            {
+                throw new ArgumentNullException(nameof(signin), "ProductDto cannot be null.");
+            }
+
+            var Account = _mapper.Map<AccountCollection>(signin);
+            Account.Id = ObjectId.GenerateNewId();
+            Account.Role = "Adminstrator";
+            Account.IsActive = true;
+            if (Account == null)
+            {
+                throw new InvalidOperationException("Mapping resulted in null ProductCollection.");
+            }
+
+            await _accrepo.AddUser(Account);
+        }
+
     }
 }

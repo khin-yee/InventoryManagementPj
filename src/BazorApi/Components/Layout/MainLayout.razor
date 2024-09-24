@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization
+@using MudBlazor
 @inherits LayoutComponentBase
 
 <div class="page">
@@ -21,5 +22,14 @@
         <article class="content px-4">
             @Body
         </article>
+                    @* Required *@
+            <MudThemeProvider />
+            <MudPopoverProvider />
+
+            @* Needed for dialogs *@
+            <MudDialogProvider />
+
+            @* Needed for snackbars *@
+            <MudSnackbarProvider />
     </main>
 </div>

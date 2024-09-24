@@ -13,6 +13,8 @@ namespace BlazorApi.Service
         public MappingProfile()
         {
             CreateMap<ProductDto, ProductCollection>();
+            CreateMap<SignIn, AccountCollection>();
+
         }
     }
 }

@@ -13,6 +13,8 @@ namespace BlazorApi.Service
         Task<List<AccountCollection>> GetAccount();
          Task<AccountCollection> GetAccountAuth(string username, string password);
         Task AddProduct(ProductDto product);
+        Task AddUser(SignIn signin);
+
 
     }
 }

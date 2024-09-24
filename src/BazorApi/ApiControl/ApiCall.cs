@@ -29,7 +29,22 @@ namespace BazorApi.ApiControl
             var res = await _http.SendOneAsync<AccountCollection>("https://localhost:7094/AccValidate", "100", encodedContent, HttpMethod.Post);
             return res;
         }
+        public async Task<bool> AddAccount(SignIn account)
+        {
+            var content = new FormUrlEncodedContent(new Dictionary<string, string>
+    {
+            { "UserName", account.Username},
+            { "Password", account.Password},
+            { "Role", account.Role},
+
+    });
+
+            var res = await _http.SendOneAsync<Model.AccountCollection>("https://localhost:7094/AccValidate", "100", content, HttpMethod.Post);
+            return true;
+        }
+
+
     }
-    
+
 
 }

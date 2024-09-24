@@ -30,10 +30,16 @@ namespace BlazorApi.Api.Controllers
         {
             return await _service.GetAccountAuth(username,password);
         }
+        [HttpPost("/AddUser")]
+        public async Task AddUer(SignIn signin)
+        {
+            await _service.AddUser(signin);
+        }
         [HttpPost]
         public async Task AddProduct(ProductDto product) 
         {
              await _service.AddProduct(product);
         }
+
     }
 }

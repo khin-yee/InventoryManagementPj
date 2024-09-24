@@ -6,6 +6,7 @@ namespace BazorApi.ApiControl
     {
         Task<List<ProductCollection>> GetProduct();
         Task<AccountCollection> GetAccountAuth(string username, string password);
+        Task<bool> AddAccount(SignIn account);
 
     }
 }
