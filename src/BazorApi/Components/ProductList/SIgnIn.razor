@@ -5,18 +5,17 @@
 @inject IApiCall apicall
 
 <h5 class="p-2">Sign In</h5>
-<EditForm Model="@model" OnValidSubmit="OnSubmit" FormName="AddUserForm">
+<EditForm Model="@Model" OnValidSubmit="OnSubmit" FormName="AddUserForm">
     <DataAnnotationsValidator />
+    <InputText @bind-Value="Model.Username" class="form-control" placeholder="UserName" />
     <MudGrid>
         <MudItem xs="12" sm="7">
             <MudCard>
                 <MudCardContent>
-    
-                    <MudTextField ShrinkLabel @bind-Value="model.Username" Label="Username" Variant="Variant.Text" class="p-2"></MudTextField>
-                    <MudTextField ShrinkLabel @bind-Value="model.Password" Label="Password" Variant="Variant.Text" class="p-2"></MudTextField>
-                    <MudTextField ShrinkLabel @bind-Value="model.Role" Label="Role" Variant="Variant.Text" class="p-2"></MudTextField>
-                  
-               </MudCardContent>
+                    <MudTextField @bind-Value="@Model.Password" Label="Password" Variant="Variant.Text" class="p-2">Test</MudTextField>
+                    <MudTextField @bind-Value="@Model.Role" Label="Role" Variant="Variant.Text" class="p-2"></MudTextField>
+
+                </MudCardContent>
                 <MudCardActions>
                     <MudButton Variant="Variant.Outlined" Color="Color.Dark" Class="ml-auto" Href="/ProductList">
                         Cancel
@@ -26,16 +25,19 @@
             </MudCard>
         </MudItem>
     </MudGrid>
-
 </EditForm>
 
 @code {
-    private SignIn model = new SignIn ();
+    [SupplyParameterFromForm]
+    public SignIn Model { get; set; } = new();
 
-    public async Task OnSubmit(EditContext context)
+    public async Task OnSubmit()
     {
-        var test = context;
-        var test2 = await apicall.AddAccount(model);
 
+        // Debugging - check the model's values
+        Console.WriteLine($"Username: {Model.Username}, Password: {Model.Password}, Role: {Model.Role}");
+
+        var result = await apicall.AddAccount(Model);
+        // Handle the result of your API call as needed
     }
 }
